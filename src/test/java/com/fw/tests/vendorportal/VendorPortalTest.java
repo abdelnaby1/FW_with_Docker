@@ -8,12 +8,15 @@ import com.fw.tests.vendorportal.model.VendorPortalTestData;
 import com.fw.util.Config;
 import com.fw.util.Constants;
 import com.fw.util.JsonUtil;
+import io.qameta.allure.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
+
+import static io.qameta.allure.SeverityLevel.CRITICAL;
 
 @Listeners(TestListener.class)
 public class VendorPortalTest extends Common {
@@ -39,6 +42,12 @@ public class VendorPortalTest extends Common {
         this.testData = JsonUtil.getTestData(testDataPath, VendorPortalTestData.class);
     }
     @Test
+    @Description("This test attempts to log into the website using a login and a password.")
+    @Severity(CRITICAL)
+    @Owner("Abdelnaby")
+    @Link(name = "Website", url = "https://dev.example.com/")
+    @Issue("AUTH-123")
+    @TmsLink("TMS-456")
     public void loginTest(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.goTo(Config.get(Constants.VENDOR_PORTAL_URL));
@@ -47,6 +56,12 @@ public class VendorPortalTest extends Common {
     }
 
     @Test(dependsOnMethods = "loginTest")
+    @Description("This test attempts to search and verify count.")
+    @Severity(CRITICAL)
+    @Owner("Abdelnaby")
+    @Link(name = "Website", url = "https://dev.example.com/")
+    @Issue("AUTH-124")
+    @TmsLink("TMS-457")
     public void dashboardTest(){
         DashboardPage dashboardPage = new DashboardPage(driver);
 
@@ -64,6 +79,12 @@ public class VendorPortalTest extends Common {
     }
 
     @Test(dependsOnMethods = "dashboardTest")
+    @Description("This test attempts to logout.")
+    @Severity(CRITICAL)
+    @Owner("Abdelnaby")
+    @Link(name = "Website", url = "https://dev.example.com/")
+    @Issue("AUTH-125")
+    @TmsLink("TMS-458")
     public void logoutTest(){
         LoginPage loginPage = new LoginPage(driver);
         DashboardPage dashboardPage = new DashboardPage(driver);
