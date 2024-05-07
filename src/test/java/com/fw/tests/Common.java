@@ -7,6 +7,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -27,6 +28,9 @@ public class Common {
         Capabilities caps = new ChromeOptions();
         if (Constants.FIREFOX.equalsIgnoreCase(Config.get(Constants.BROWSER))){
             caps = new FirefoxOptions();
+        }
+        else if (Constants.EDGE.equalsIgnoreCase(Config.get(Constants.BROWSER))){
+            caps = new EdgeOptions();
         }
         String urlFormat = Config.get(Constants.GRID_URL_FORMAT);
         String hubHost = Config.get(Constants.GRID_HUB_HOST);
