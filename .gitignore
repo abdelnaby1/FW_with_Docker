@@ -5,6 +5,8 @@ target/
 
 #reports
 output
+allure-results
+allure-reports
 
 .idea
 ### IntelliJ IDEA ###
