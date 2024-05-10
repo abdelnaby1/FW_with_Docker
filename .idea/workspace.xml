@@ -5,18 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2df716f-7655-4c0e-8163-b0b79b24331e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grid.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/grid.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/listener/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/listener/TestListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/Common.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/flightreservation/FlightReservationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/flightreservation/FlightReservationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/vendorportal/VendorPortalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/vendorportal/VendorPortalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ResourceLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/default.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,9 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2g9OOoV6xy6TXBe4Jyty9VLI4SA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,16 +48,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Self/FW_with_Docker"
+    "git-widget-placeholder": "more__tests",
+    "last_directory_selection": "D:/Self/FW_with_Docker/src/test/java",
+    "last_opened_file_path": "D:/Self/FW_with_Docker/src/test/resources/test-suites"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Self\FW_with_Docker\src\test\resources\test-suites" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Self\FW_with_Docker" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fw.tests.vodafoneshop" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="FW_with_Docker" />
       <method v="2">
@@ -55,6 +74,44 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="FW_with_Docker" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddToCartTests.addToCartFromHomeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FW_docker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fw.tests.vodafoneshop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fw.tests.vodafoneshop" />
+      <option name="MAIN_CLASS_NAME" value="com.fw.tests.vodafoneshop.AddToCartTests" />
+      <option name="METHOD_NAME" value="addToCartFromHomeTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FW_docker" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/cart.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FW_docker" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/flight-reservation.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,6 +128,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml" />
+        <item itemvalue="TestNG.AddToCartTests.addToCartFromHomeTest" />
+        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/vendor-portal.xml" />
       </list>
     </recent_temporary>

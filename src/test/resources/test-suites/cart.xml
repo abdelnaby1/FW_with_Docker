@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="vendor-portal" parallel="classes" thread-count="3">
+    <test name="vodafone-cart">
+        <classes>
+            <class name="com.fw.tests.vodafoneshop.AddToCartTests"/>
+<!--            <class name="com.fw.tests.vodafoneshop.AddToCartTests2"/>-->
+        </classes>
+    </test>
+
+</suite>

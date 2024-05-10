@@ -1,8 +1,7 @@
 package com.fw.tests;
 
-import com.fw.util.Config;
-import com.fw.util.Constants;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.Config;
+import utils.Constants;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
