@@ -4,6 +4,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+
 import static org.testng.Assert.*;
 
 public class ElementActions {
@@ -141,6 +143,50 @@ public class ElementActions {
         }
 
     }
+    public String getAttributeValue(By elementLocator, String attributeName) {
+        return getAttributeValue(driver,elementLocator,attributeName);
+    }
+    public  String getAttributeValue(WebDriver driver, By elementLocator, String attributeName) {
+        try {
+            return driver.findElement(elementLocator).getAttribute(attributeName);
+        } catch (Exception e) {
+            fail(e.getMessage());
+
+        }
+        return null;
+    }
+    public  void select(WebDriver driver, By elementLocator, SelectType selectType, String option) {
+//        locatingElementStrategy(driver, elementLocator);
+        try {
+            Select select = new Select(driver.findElement(elementLocator));
+            assertFalse(select.isMultiple());
+            switch (selectType) {
+                case TEXT -> select.selectByVisibleText(option);
+                case VALUE -> select.selectByValue(option);
+                default -> fail("Unexpected value: " + selectType);
+            }
+        } catch (Exception e) {
+            fail(e.getMessage());
+        }
+    }
+
+    public ElementActions select(By elementLocator, SelectType selectType, String option) {
+        select(driver, elementLocator, selectType, option);
+        return this;
+    }
+
+    public void mouseHover(WebDriver driver, By elementLocator) {
+        try {
+            new Actions(driver).moveToElement(driver.findElement(elementLocator)).perform();
+        } catch (Exception e) {
+            fail(e.getMessage());
+        }
+    }
+    public ElementActions mouseHover(By elementLocator) {
+        mouseHover(driver, elementLocator);
+        return this;
+    }
+
     public Boolean isElementDisplayed(By elementLocator){
         try {
             // Wait for the element to be visible
