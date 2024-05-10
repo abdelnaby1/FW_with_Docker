@@ -19,6 +19,11 @@ public class ElementActions {
                 .until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
         return this;
     }
+    public ElementActions waitForVisibilityOfAll(By elementLocator){
+        Helper.getExplicitWait(driver)
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementLocator));
+        return this;
+    }
 
     public ElementActions waitForInvisibility(WebElement element){
         Helper.getExplicitWait(driver)
@@ -47,6 +52,17 @@ public class ElementActions {
                 .until(ExpectedConditions.urlContains("cart"));
         return this;
     }
+    public ElementActions waitForElementToContainsText(By elementLocator,String text){
+        try {
+            Helper.getExplicitWait(driver)
+                    .until(ExpectedConditions.textToBePresentInElementLocated(elementLocator,text));
+        } catch (Exception e) {
+            fail(e.getMessage());
+        }
+
+        return this;
+    }
+
     public ElementActions click(By elementLocator) {
         click(driver, elementLocator);
         return this;
@@ -107,7 +123,7 @@ public class ElementActions {
     }
 
     public String getText( By elementLocator) {
-        return getText(driver,elementLocator);
+       return getText(driver,elementLocator);
     }
 
     private String getText(WebDriver driver, By elementLocator) {
@@ -118,12 +134,12 @@ public class ElementActions {
         }
         try {
 
-            String text = driver.findElement(elementLocator).getText();
-            return text;
+            return driver.findElement(elementLocator).getText();
         } catch (Exception e) {
             fail(e.getMessage());
+            return null;
         }
-        return null;
+
     }
     public Boolean isElementDisplayed(By elementLocator){
         try {

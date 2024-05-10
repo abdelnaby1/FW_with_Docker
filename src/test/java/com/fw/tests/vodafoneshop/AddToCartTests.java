@@ -14,12 +14,12 @@ import utils.Constants;
 
 import java.net.MalformedURLException;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class AddToCartTests extends Common {
     private WebDriver driver;
     int cartCountAfterAddingProduct;
+    String productNameInProductDetailsPage;
     @BeforeSuite
     public void setupConfig(){
         Config.initialize();
@@ -37,37 +37,32 @@ public class AddToCartTests extends Common {
     @Test
     public void addToCartFromHomeTest() {
 
-        int cartCountBeforeAddingProduct =
+        productNameInProductDetailsPage =
                 new HomePage(driver)
                         .gotToUrl()
                         .acceptAllCookies()
                         .openProfilePage()
                         .login("01061336022","Abdelnaby298082621@")
                         .clickOnProduct(1)
-                        .getCartCount();
+                        .addProductToCart()
+                        .getProductName();
 
-        System.out.println("before" + cartCountBeforeAddingProduct);
-        cartCountAfterAddingProduct =
+        Boolean isProductExistedOnCart =
                 new ProductDetailsPage(driver)
-                .addProductToCart()
                         .openCartPage()
-                        .getCartCount();
-        System.out.println("after" + cartCountAfterAddingProduct);
+                        .verifyProductExistedOnCart(productNameInProductDetailsPage);
 
-        assertEquals(cartCountAfterAddingProduct,cartCountBeforeAddingProduct + 1,"The CartPage Count should be increased by 1");
-
+        System.out.println("product name " + productNameInProductDetailsPage);
+        assertTrue(isProductExistedOnCart,"The product should be in the cart page after being added");
     }
 
     @Test(dependsOnMethods = "addToCartFromHomeTest")
-    public void removeProductFromCartTest() throws InterruptedException {
-        int cartCountAfterRemovingProduct = new HomePage(driver)
-                .openCartPage()
-                .removeProductFromCart(2)
-                        .getCartCount();
-
-        System.out.println("after removing" + cartCountAfterRemovingProduct);
-
-        assertEquals(cartCountAfterRemovingProduct,cartCountAfterAddingProduct - 1,"The CartPage Count should be decreased by 1");
+    public void removeProductFromCartTest()  {
+        Boolean isProductExistedOnCart =
+                new CartPage(driver)
+                        .removeProductFromCart(2)
+                        .verifyProductExistedOnCart(productNameInProductDetailsPage);
+        assertFalse(isProductExistedOnCart,"The product should not be in the cart page after being removed");
 
 
     }

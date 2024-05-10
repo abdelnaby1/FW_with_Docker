@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e2df716f-7655-4c0e-8163-b0b79b24331e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/listener/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/listener/TestListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/Common.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/flightreservation/FlightReservationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/flightreservation/FlightReservationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/vendorportal/VendorPortalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/vendorportal/VendorPortalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/JsonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/util/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/default.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/ProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ElementActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ElementActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/vodafoneshop/AddToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/vodafoneshop/AddToCartTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +89,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/all.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FW_docker" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/all.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FW_docker" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/cart.xml" />
@@ -129,6 +132,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml" />
+        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/all.xml" />
         <item itemvalue="TestNG.AddToCartTests.addToCartFromHomeTest" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/vendor-portal.xml" />

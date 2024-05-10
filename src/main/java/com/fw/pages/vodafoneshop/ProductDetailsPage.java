@@ -8,7 +8,7 @@ public class ProductDetailsPage {
     private final WebDriver driver;
     private ElementActions elementActions;
     private By addToCartBtn = By.xpath("//button[contains(@class,'add-to-cart')]");
-
+    private By productNameLoc = By.cssSelector(".productDetails-box .desktop-details p");
 
 
     public ProductDetailsPage(WebDriver driver){
@@ -28,5 +28,8 @@ public class ProductDetailsPage {
     }
     public int getCartCount(){
         return new Navbar(driver).getCartCount();
+    }
+    public String getProductName(){
+        return elementActions.getText(productNameLoc);
     }
 }

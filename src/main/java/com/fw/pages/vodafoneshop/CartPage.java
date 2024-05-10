@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.ElementActions;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class CartPage {
     private final WebDriver driver;
 
@@ -15,6 +18,7 @@ public class CartPage {
     private By cartProductNameLoc(int productNum){
         return By.xpath("(//div[contains(@class,'cart-card-container')])["+productNum+"]//*[contains(@class,'cartProduct-name')]");
     }
+    private By cartProductsNamesLoc = By.xpath("//*[contains(@class,'cartProduct-name')]");
     private By toastMsgLoc = By.xpath("//*[contains(text(),'Item Removed Successfully')]");
 
     public CartPage(WebDriver driver){
@@ -22,9 +26,7 @@ public class CartPage {
         elementActions = new ElementActions(this.driver);
     }
     public CartPage removeProductFromCart(int productNum){
-        String productName = elementActions.getText(cartProductNameLoc(productNum));
-        WebElement ele = driver.findElement(By.xpath("//*[contains(text(),'"+productName+"')]"));
-        elementActions.click(cartProductRemoveBtn(productNum)).waitForInvisibility(ele);
+        elementActions.click(cartProductRemoveBtn(productNum)).waitForElementToContainsText(By.cssSelector("button.cart-btn span"), String.valueOf(getCartCount() -1));
         return this;
     }
     public Boolean isDeletedToastMsgDisplayed(){
@@ -32,6 +34,17 @@ public class CartPage {
     }
     public int getCartCount(){
         return new Navbar(driver).getCartCount();
+    }
+    public Boolean verifyProductExistedOnCart(String productName){
+        elementActions.waitForVisibilityOfAll(cartProductsNamesLoc);
+
+        List<String> productsNames =
+                driver.findElements(cartProductsNamesLoc).stream()
+                .map(WebElement::getText)
+                .toList();
+        System.out.println("all names " + productsNames);
+        return productsNames.stream()
+                .anyMatch(s -> s.equals(productName));
     }
 
 }
