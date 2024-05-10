@@ -2,7 +2,7 @@ package com.fw.pages.vodafoneshop;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import utils.ElementActions;
+import com.fw.utils.ElementActions;
 
 public class ProductDetailsPage {
     private final WebDriver driver;

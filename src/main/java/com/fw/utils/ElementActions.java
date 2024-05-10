@@ -1,4 +1,4 @@
-package utils;
+package com.fw.utils;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;

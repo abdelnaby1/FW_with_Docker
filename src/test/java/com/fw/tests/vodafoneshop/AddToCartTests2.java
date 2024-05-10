@@ -1,6 +1,5 @@
 package com.fw.tests.vodafoneshop;
 
-import com.fw.pages.vodafoneshop.CartPage;
 import com.fw.pages.vodafoneshop.HomePage;
 import com.fw.tests.Common;
 import org.openqa.selenium.WebDriver;
@@ -9,8 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import utils.Config;
-import utils.Constants;
+import com.fw.utils.Config;
+import com.fw.utils.Constants;
 
 import java.net.MalformedURLException;
 

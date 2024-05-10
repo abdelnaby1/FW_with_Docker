@@ -1,7 +1,7 @@
 package com.fw.listener;
 
 
-import utils.Constants;
+import com.fw.utils.Constants;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;

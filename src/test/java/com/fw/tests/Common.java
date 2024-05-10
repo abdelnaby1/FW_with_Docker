@@ -1,7 +1,7 @@
 package com.fw.tests;
 
-import utils.Config;
-import utils.Constants;
+import com.fw.utils.Config;
+import com.fw.utils.Constants;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
