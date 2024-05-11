@@ -62,7 +62,7 @@ public class HomePage {
         return this;
     }
     public SubCategoryPage clickOnMenu(String category,String subcategory){
-        elementActions.mouseHover(By.linkText(category)).click(By.linkText(subcategory));
+        elementActions.mouseHover(By.xpath("//div[contains(@class,'header-menu')]//ul[contains(@class,'notmobile')]/li[1]/a")).click(By.linkText(subcategory));
         return new SubCategoryPage(driver,subcategory);
     }
     public CartPage openCart(){

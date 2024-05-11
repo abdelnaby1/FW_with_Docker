@@ -1,20 +1,11 @@
 version: "3"
 services:
-  vendor-portal:
-    image: abdelnaby1/selenium-test-script
+  nopcommerce:
+    image: abdelnaby1/selenium-test-script/nopcommerce
     environment:
       - BROWSER=${BROWSER}
       - HUB_HOST=hub
       - THREAD_COUNT=4
-      - TEST_SUITE=vendor-portal.xml
+      - TEST_SUITE=nopcommerce.xml
     volumes:
-      - ./output/vendor-portal:/home/selenium-docker/test-output
-  flight-reservation:
-    image: abdelnaby1/selenium-test-script
-    environment:
-      - BROWSER=${BROWSER}
-      - HUB_HOST=hub
-      - THREAD_COUNT=4
-      - TEST_SUITE=flight-reservation.xml
-    volumes:
-      - ./output/flight-reservation:/home/selenium-docker/test-output
+      - ./output/nopcommerce:/home/selenium-docker/test-output

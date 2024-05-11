@@ -8,6 +8,7 @@ import com.fw.pages.nopcommerce.SearchPage;
 import com.fw.tests.Common;
 import com.fw.utils.Config;
 import com.fw.utils.Constants;
+import com.fw.utils.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
@@ -18,7 +19,7 @@ import java.util.Date;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class RegisterTests extends Common {
+public class RegisterTests{
     private WebDriver driver;
 
     @BeforeSuite
@@ -28,10 +29,9 @@ public class RegisterTests extends Common {
 
     @BeforeClass
     public void setDriver(ITestContext ctx) throws MalformedURLException {
-        this.driver = Boolean.parseBoolean(Config.get(Constants.GRID_ENABLED))
-                ? getRemoteDriver() : getLocalDriver();
-        ctx.setAttribute(Constants.DRIVER, this.driver);
-        this.driver.manage().window().maximize();
+        driver = WebDriverManager.getDriver();
+        new HomePage(driver)
+                .goToUrl();
 
     }
     @DataProvider(name = "userData")
@@ -47,7 +47,6 @@ public class RegisterTests extends Common {
     public void testValidRegister(String fName, String lName, String email, String password){
         String successMsg =
                 new HomePage(driver)
-                        .goToUrl()
                         .openRegistrationPage()
                         .register(fName,lName,email,password)
                         .getSuccessMessage();
@@ -64,6 +63,7 @@ public class RegisterTests extends Common {
 
     @AfterClass
     public void quitDriver(){
-        this.driver.quit();
+        WebDriverManager.quitDriver();
+
     }
 }

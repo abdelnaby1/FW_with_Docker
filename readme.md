@@ -19,3 +19,29 @@ java -Dselenium.grid.enabled=true -Dselenium.grid.hubHost=localhost -cp 'libs/*'
 
 To run the tests using Selenium Grid with specific thread count
 java -Dselenium.grid.enabled=true -Dselenium.grid.hubHost=localhost -cp 'libs/*' org.testng.TestNG test-suites/flight-reservation.xml -threadcount 2
+
+
+
+run.bat
+# start the grid with 2 chrome containers
+docker-compose -f grid.yaml up --scale chrome=2 -d
+
+# run test suites with chrome
+set BROWSER=chrome
+docker-compose up
+
+# stop chrome and run firefox containers
+docker-compose -f grid.yaml up --scale firefox=2 -d
+
+# run test suites with firefox
+set BROWSER=firefox
+docker-compose up
+
+# run test suites with edge
+docker-compose -f grid.yaml up --scale edge=2 -d
+set BROWSER=edge
+docker-compose up
+
+# bring down all
+docker-compose -f grid.yaml down
+docker-compose down

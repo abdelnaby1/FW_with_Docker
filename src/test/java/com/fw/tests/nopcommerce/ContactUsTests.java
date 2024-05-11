@@ -5,6 +5,7 @@ import com.fw.pages.nopcommerce.HomePage;
 import com.fw.tests.Common;
 import com.fw.utils.Config;
 import com.fw.utils.Constants;
+import com.fw.utils.WebDriverManager;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,38 +30,15 @@ import static org.testng.Assert.assertTrue;
 public class ContactUsTests  {
     private WebDriver driver;
 
-    private WebDriver getLocalDriver(){
 
-        if (Constants.FIREFOX.equalsIgnoreCase(Config.get(Constants.BROWSER))){
-            return new FirefoxDriver();
-        }
-        return new ChromeDriver();
-    }
-
-    private WebDriver getRemoteDriver() throws MalformedURLException {
-        Capabilities caps = new ChromeOptions();
-        if (Constants.FIREFOX.equalsIgnoreCase(Config.get(Constants.BROWSER))){
-            caps = new FirefoxOptions();
-        }
-        else if (Constants.EDGE.equalsIgnoreCase(Config.get(Constants.BROWSER))){
-            caps = new EdgeOptions();
-        }
-        String urlFormat = Config.get(Constants.GRID_URL_FORMAT);
-        String hubHost = Config.get(Constants.GRID_HUB_HOST);
-        String url = String.format(urlFormat, hubHost);
-        return new RemoteWebDriver(new URL(url),caps);
-
-    }
     @BeforeSuite
     public void setupConfig(){
         Config.initialize();
     }
     @BeforeClass
     public void setDriver(ITestContext ctx) throws MalformedURLException {
-        this.driver = Boolean.parseBoolean(Config.get(Constants.GRID_ENABLED))
-                ? getRemoteDriver() : getLocalDriver();
-        ctx.setAttribute(Constants.DRIVER, this.driver);
-        this.driver.manage().window().maximize();
+        driver = WebDriverManager.getDriver();
+
 
     }
     @Test
@@ -81,6 +59,7 @@ public class ContactUsTests  {
 
     @AfterClass
     public void quitDriver(){
-        this.driver.quit();
+        WebDriverManager.quitDriver();
+
     }
 }
