@@ -1,14 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Wocommerce" parallel="classes" thread-count="4">
+<suite name="Wocommerce" parallel="classes" thread-count="8">
     <test name="Register">
         <classes>
-            <class name="com.fw.tests.nopcommerce.RegisterTests" />
             <class name="com.fw.tests.nopcommerce.AddProductToCartTests" />
             <class name="com.fw.tests.nopcommerce.ContactUsTests" />
             <class name="com.fw.tests.nopcommerce.HoverMenuTests" />
             <class name="com.fw.tests.nopcommerce.MyAccountTests" />
 <!--            <class name="com.fw.tests.nopcommerce.All" />-->
-
+            <class name="com.fw.tests.nopcommerce.RegisterTests" />
         </classes>
     </test>
 

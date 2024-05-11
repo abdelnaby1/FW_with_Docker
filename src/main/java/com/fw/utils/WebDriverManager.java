@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ThreadGuard;
 import org.testng.ITestContext;
@@ -21,7 +22,7 @@ public class WebDriverManager {
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
 
-    public static synchronized WebDriver getDriver() {
+    public static WebDriver getDriver() {
         if (driverThreadLocal.get() == null){
             return initializeDriver();
         }
@@ -31,18 +32,26 @@ public class WebDriverManager {
     public static WebDriver initializeDriver() {
         ITestResult result = Reporter.getCurrentTestResult();
         ITestContext context = result.getTestContext();
-
-        if ( Boolean.parseBoolean(Config.get(Constants.GRID_ENABLED))){
-            Capabilities caps = new ChromeOptions();
+        Capabilities caps;
+        if (Boolean.parseBoolean(Config.get(Constants.GRID_ENABLED))){
             if (Constants.FIREFOX.equalsIgnoreCase(Config.get(Constants.BROWSER))){
-                caps = new FirefoxOptions();
+                FirefoxOptions options = new FirefoxOptions();
+                options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+                caps = options;
             }
             else if (Constants.EDGE.equalsIgnoreCase(Config.get(Constants.BROWSER))){
-                caps = new EdgeOptions();
+                EdgeOptions options = new EdgeOptions();
+                options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+                caps =  options;
+            }else{
+                ChromeOptions options = new ChromeOptions();
+                options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+                caps =  options;
             }
             String urlFormat = Config.get(Constants.GRID_URL_FORMAT);
             String hubHost = Config.get(Constants.GRID_HUB_HOST);
             String url = String.format(urlFormat, hubHost);
+
             try {
                 driverThreadLocal.set(ThreadGuard.protect(new RemoteWebDriver(new URL(url),caps)));
             } catch ( MalformedURLException e) {
@@ -55,8 +64,10 @@ public class WebDriverManager {
             else if (Constants.EDGE.equalsIgnoreCase(Config.get(Constants.BROWSER))){
                 driverThreadLocal.set(ThreadGuard.protect(new EdgeDriver()));
             }
+            else{
+                driverThreadLocal.set(ThreadGuard.protect(new ChromeDriver()));
+            }
             //default is chrome
-            driverThreadLocal.set(ThreadGuard.protect(new ChromeDriver()));
         }
         context.setAttribute(Constants.DRIVER, driverThreadLocal.get());
         driverThreadLocal.get().manage().window().maximize();

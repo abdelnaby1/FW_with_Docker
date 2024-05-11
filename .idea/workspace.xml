@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2df716f-7655-4c0e-8163-b0b79b24331e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.bat" beforeDir="false" afterPath="$PROJECT_DIR$/run.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/nopcommerce/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/nopcommerce/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/AddProductToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/AddProductToCartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/ContactUsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/ContactUsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/HoverMenuTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/HoverMenuTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/MyAccountTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/MyAccountTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/RegisterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/nopcommerce/RegisterTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-suites/nopcommerece.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-suites/nopcommerce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/utils/WebDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/utils/WebDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-suites/nopcommerce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-suites/nopcommerce.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +59,7 @@
       <recent name="com.fw.tests.vodafoneshop" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerece.xml">
+  <component name="RunManager" selected="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerce.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="FW_with_Docker" />
       <method v="2">
@@ -78,16 +69,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="FW_with_Docker" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/all.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FW_docker" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/all.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,6 +86,16 @@
     <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FW_docker" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/flight-reservation.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerce.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FW_docker" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/nopcommerce.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -141,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerce.xml" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerece.xml" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" />
         <item itemvalue="TestNG.RegisterTests" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml" />
-        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/all.xml" />
       </list>
     </recent_temporary>
   </component>
