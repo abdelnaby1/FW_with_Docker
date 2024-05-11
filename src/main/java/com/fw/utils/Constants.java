@@ -18,6 +18,7 @@ public class Constants {
 
     public static final String VODAFONE_SHOP_URL = "vodafoneshop.url";
 
+    public static final String NOPCOMMERCE_URL = "nopcommerce.url";
 
 
 }

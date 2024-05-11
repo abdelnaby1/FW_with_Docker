@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e2df716f-7655-4c0e-8163-b0b79b24331e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/vodafoneshop/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ElementActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ElementActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fw/tests/vodafoneshop/AddToCartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fw/tests/vodafoneshop/AddToCartTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/nopcommerce/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/nopcommerce/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/pages/nopcommerce/RegisterResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/pages/nopcommerce/RegisterResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fw/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fw/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/default.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/default.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,19 +34,22 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2g9OOoV6xy6TXBe4Jyty9VLI4SA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "more__tests",
-    "last_directory_selection": "D:/Self/FW_with_Docker/src/test/java",
-    "last_opened_file_path": "D:/Self/FW_with_Docker/src/test/resources/test-suites"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;more__tests&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Self/FW_with_Docker/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Self/FW_with_Docker/src/test/resources/test-suites&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Self\FW_with_Docker\src\test\resources\test-suites" />
@@ -54,10 +58,11 @@
       <recent name="D:\Self\FW_with_Docker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fw.tests.nopcommerce" />
       <recent name="com.fw.tests.vodafoneshop" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml">
+  <component name="RunManager" selected="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="FW_with_Docker" />
       <method v="2">
@@ -67,24 +72,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="FW_with_Docker" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddToCartTests.addToCartFromHomeTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="FW_docker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fw.tests.vodafoneshop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fw.tests.vodafoneshop" />
-      <option name="MAIN_CLASS_NAME" value="com.fw.tests.vodafoneshop.AddToCartTests" />
-      <option name="METHOD_NAME" value="addToCartFromHomeTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,10 +106,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/vendor-portal.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerece.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="FW_docker" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/vendor-portal.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/test-suites/nopcommerece.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FW_docker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fw.tests.nopcommerce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fw.tests.nopcommerce" />
+      <option name="MAIN_CLASS_NAME" value="com.fw.tests.nopcommerce.RegisterTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -131,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" />
+        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/nopcommerece.xml" />
+        <item itemvalue="TestNG.RegisterTests" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/cart.xml" />
         <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/all.xml" />
-        <item itemvalue="TestNG.AddToCartTests.addToCartFromHomeTest" />
-        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/flight-reservation.xml" />
-        <item itemvalue="TestNG.D:/Self/FW_with_Docker/src/test/resources/test-suites/vendor-portal.xml" />
       </list>
     </recent_temporary>
   </component>

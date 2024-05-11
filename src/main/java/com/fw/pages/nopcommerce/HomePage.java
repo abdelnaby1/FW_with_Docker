@@ -1,8 +1,14 @@
 package com.fw.pages.nopcommerce;
 
+import com.fw.utils.Config;
+import com.fw.utils.Constants;
 import com.fw.utils.ElementActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage {
 
@@ -21,6 +27,10 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
         elementActions = new ElementActions(this.driver);
+    }
+    public HomePage goToUrl(){
+        driver.get(Config.get(Constants.NOPCOMMERCE_URL));
+        return this;
     }
     public RegisterPage openRegistrationPage(){
         elementActions.click(registerLink);
@@ -44,6 +54,11 @@ public class HomePage {
     }
     public HomePage changeCurrency(String currency){
         elementActions.select(currencySelect, ElementActions.SelectType.TEXT,currency);
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return this;
     }
     public SubCategoryPage clickOnMenu(String category,String subcategory){

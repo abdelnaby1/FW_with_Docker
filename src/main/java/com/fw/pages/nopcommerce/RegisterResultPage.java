@@ -1,6 +1,5 @@
 package com.fw.pages.nopcommerce;
 
-import com.fw.pages.vodafoneshop.HomePage;
 import com.fw.utils.ElementActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,7 @@ public class RegisterResultPage {
         this.driver = driver;
         elementActions = new ElementActions(driver);
     }
-    public com.fw.pages.vodafoneshop.HomePage clickContinueBtn(){
+    public HomePage clickContinueBtn(){
         elementActions.click(continueBtn);
         return new HomePage(driver);
     }

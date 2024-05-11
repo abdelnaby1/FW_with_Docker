@@ -80,7 +80,7 @@
 <!--                        <browser>chrome</browser>-->
                     </systemPropertyVariables>
                     <suiteXmlFiles>
-                        <file>src/test/resources/test-suits/all.xml</file>
+                        <file>src/test/resources/test-suites/nopcommerece.xml</file>
 <!--                        <file>src/test/resources/test-suits/flight-reservation.xml</file>-->
 <!--                        <file>src/test/resources/test-suits/vendor-portal.xml</file>-->
                     </suiteXmlFiles>
