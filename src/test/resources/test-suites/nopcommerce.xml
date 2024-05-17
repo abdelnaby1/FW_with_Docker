@@ -2,6 +2,10 @@
 <suite name="Wocommerce" parallel="classes" thread-count="8">
     <test name="Register">
         <classes>
+            <class name="com.fw.tests.nopcommerce.AddProductReviewTests" />
+            <class name="com.fw.tests.nopcommerce.AddProductToCompareTests" />
+            <class name="com.fw.tests.nopcommerce.ChangeCurrencyTests" />
+
             <class name="com.fw.tests.nopcommerce.AddProductToCartTests" />
             <class name="com.fw.tests.nopcommerce.ContactUsTests" />
             <class name="com.fw.tests.nopcommerce.HoverMenuTests" />

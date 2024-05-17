@@ -16,20 +16,20 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class WebDriverManager {
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
 
-    public static WebDriver getDriver() {
-        if (driverThreadLocal.get() == null){
-            return initializeDriver();
-        }
+    public static synchronized  WebDriver getDriver() {
+        initializeDriver();
         return driverThreadLocal.get();
     }
 
-    public static WebDriver initializeDriver() {
+    public static  void initializeDriver() {
         ITestResult result = Reporter.getCurrentTestResult();
         ITestContext context = result.getTestContext();
         Capabilities caps;
@@ -53,8 +53,8 @@ public class WebDriverManager {
             String url = String.format(urlFormat, hubHost);
 
             try {
-                driverThreadLocal.set(ThreadGuard.protect(new RemoteWebDriver(new URL(url),caps)));
-            } catch ( MalformedURLException e) {
+                driverThreadLocal.set(ThreadGuard.protect(new RemoteWebDriver(new URI(url).toURL(),caps)));
+            } catch (URISyntaxException | MalformedURLException e) {
                 throw new RuntimeException(e);
             }
         }else{
@@ -71,7 +71,6 @@ public class WebDriverManager {
         }
         context.setAttribute(Constants.DRIVER, driverThreadLocal.get());
         driverThreadLocal.get().manage().window().maximize();
-        return driverThreadLocal.get();
     }
 
     public static void quitDriver() {
